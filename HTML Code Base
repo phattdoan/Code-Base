@@ -1,0 +1,107 @@
+#Open and close table
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").hide(1000);
+    });
+});
+ $(document).ready(function(){
+  $(".btn").click(function(){
+    $(".expand1").toggle();
+  });
+      $(".btn2").click(function(){
+    $(".expand2").toggle();
+  });
+})
+
+</script>
+
+</head>
+<table class="table2">
+ <th></th><th>server 1</th><th>server 2</th>
+ <tr><td class="btn">used</td><td>1gb</td><td>2gb</td></tr>
+ <tr><td class="expand1">drive 1</td><td class="expand1">0.5gb</td><td class="expand1">1gb</td></tr>
+ <tr><td class="expand1">drive 2</td><td class="expand1">0.5gb</td><td class="expand1">1gb</td></tr>
+
+ <tr><td class="btn2">available</td><td>1gb</td><td>2gb</td></tr>
+ <tr><td class="expand2">drive 1</td><td class="expand2">0.5gb</td><td class="expand2">1gb</td></tr>
+ <tr><td class="expand2">drive 2</td><td class="expand2">0.5gb</td><td class="expand2">1gb</td></tr>
+ <tr><td>total</td><td>2gb</td><td>4gb</td></tr>
+</table>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+
+table { border-collapse: collapse; } 
+
+th, td {
+  border: solid 1px #000;
+  text-align: left;
+  padding: 5px;
+  position: relative;
+}
+
+.toggle        { display: none; }
+.toggle:target { display: table-row; }
+  
+<table class="test-table">
+  
+    <thead>
+        <tr>
+            <th></th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Division</th>
+            <th>Hire Date</th>
+        </tr>
+    </thead>
+    <tbody id="data">
+        <tr>
+            <td><a href="#tr1">Open</a></td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr id="tr1" class="toggle">
+            <td></td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+
+        <tr>
+            <td><a href="#tr2">Open</a></td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+
+        <tr id="tr2" class="toggle">
+            <td></td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+    </tbody>
+  
+</table>
+  
+  
+</body>
+</html>
