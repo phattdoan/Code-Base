@@ -1,3 +1,10 @@
+,DATES AS (
+		SELECT
+		  /*ADD_MONTHS(SYSDATE,-12)*/ DATE '2016-08-01' AS START_DT
+		  ,/*SYSDATE*/DATE '2017-08-01' AS END_DT   
+
+		FROM DUAL)	
+
 -----------------------------
 -- adding row number
 -- 
